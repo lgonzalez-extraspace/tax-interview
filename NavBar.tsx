@@ -1,11 +1,15 @@
 import * as React from 'react';
 import './styles/style.css';
+import './styles/navbar.css';
 
 export default function NavBar() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+    <div className="navbar">
+      <div className="navbar-logo"></div>
+      <div className="navbar-links">
+        <div className="navbar-link active">Fees</div>
+        <div className="navbar-link">Discounts</div>
+      </div>
     </div>
   );
 }

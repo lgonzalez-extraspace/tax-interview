@@ -1,0 +1,26 @@
+.navbar {
+  width: 180px;
+  height: 100wh;
+  display: block;
+  background-color: var(--body-grey);
+}
+
+.navbar-logo {
+  height: 100px;
+  border-bottom: 1px solid var(--white);
+  width: 100%;
+}
+
+.navbar-links {
+  padding: 0 20px 10px;
+}
+
+.navbar-link {
+  color: var(--white);
+  font-size: 18px;
+  padding: 10px 0 0 0;
+}
+
+.navbar-link.active {
+  color: var(--orange);
+}
