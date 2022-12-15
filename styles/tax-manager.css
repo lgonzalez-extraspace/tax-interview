@@ -1,3 +1,9 @@
 .tax-manager {
   padding: 10px;
 }
+
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

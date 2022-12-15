@@ -7,6 +7,7 @@ import './styles/tax-manager.css';
 export default function TaxManager() {
   return (
     <div className="tax-manager">
+      <div className="title">Tax Manager</div>
       <TaxFilters></TaxFilters>
       <TaxTable></TaxTable>
     </div>

@@ -7,7 +7,7 @@ export default function NavBar() {
     <div className="navbar">
       <div className="navbar-logo"></div>
       <div className="navbar-links">
-        <div className="navbar-link active">Fees</div>
+        <div className="navbar-link active">Taxes</div>
         <div className="navbar-link">Discounts</div>
       </div>
     </div>
