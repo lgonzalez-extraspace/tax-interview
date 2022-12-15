@@ -1,0 +1,27 @@
+body {
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --ghost-grey: rgb(243, 243, 243);
+  --bg-grey: rgb(237, 237, 237);
+  --note-blue: rgb(237, 246, 253);
+  --light-grey: rgb(224, 224, 224);
+  --hover-grey: rgb(216, 216, 216);
+  --grey: rgb(204, 204, 204);
+  --med-grey: rgb(151, 151, 151);
+  --greyish-brown: rgb(74, 74, 74);
+  --dark-grey: rgb(112, 112, 112);
+  --body-grey: rgb(84, 86, 91);
+  --pinkish-grey: rgb(204, 204, 204);
+  --red: rgb(199, 23, 23);
+  --light-red: rgb(247, 220, 220);
+  --border-red: rgb(233, 162, 162);
+  --orange: rgb(254, 131, 0);
+  --yellow-orange: rgb(254, 191, 0);
+  --bright-green: rgb(209, 239, 62);
+  --es-green: rgb(136, 192, 75);
+  --dark-green: rgb(78, 108, 46);
+  --light-blue: rgb(116, 193, 255);
+  --es-blue: rgb(15, 138, 231);
+  --dark-blue: rgb(11, 93, 155);
+  --light-green-hover: rgb(173, 212, 132);
+}
