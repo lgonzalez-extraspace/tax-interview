@@ -1,5 +1,5 @@
 import * as React from 'react';
-import FeeManager from './FeeManager';
+import TaxManager from './TaxManager';
 import Header from './Header';
 import NavBar from './NavBar';
 import './styles/layout.css';
@@ -11,7 +11,7 @@ export default function Layout() {
       <Header></Header>
       <div className="layout-body">
         <NavBar></NavBar>
-        <FeeManager></FeeManager>
+        <TaxManager></TaxManager>
       </div>
     </div>
   );
