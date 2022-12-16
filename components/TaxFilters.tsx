@@ -1,7 +1,7 @@
 import { uniq } from 'lodash';
 import * as React from 'react';
-import './styles/style.css';
-import { data } from './data/data';
+import '../styles/style.css';
+import { data } from '../data/data';
 
 export default function FeeFilters({
   usStateChanged,
