@@ -9,7 +9,7 @@
   height: 100px;
   border-bottom: 1px solid var(--white);
   width: 100%;
-  background-image: url('styles/e-s-logo.png');
+  background-image: url('../public/e-s-logo.png');
   background-repeat: no-repeat;
   background-size: 160px;
   background-position: center;
