@@ -1,9 +1,6 @@
-export const data: {
-  id: number;
-  state: string;
-  city: string;
-  store: string;
-}[] = [
+import { Location } from '../models/location-model';
+
+export const data: Location[] = [
   { id: 1, state: 'Missouri', city: 'Saint Louis', store: '63150' },
   { id: 2, state: 'Pennsylvania', city: 'Lancaster', store: '17622' },
   { id: 3, state: 'Tennessee', city: 'Jackson', store: '38308' },

@@ -1,13 +1,15 @@
 import { uniq } from 'lodash';
 import * as React from 'react';
 import '../styles/style.css';
-import { data } from '../data/data';
+import { locationService } from '../services/location-service';
 
 export default function FeeFilters({
   usStateChanged,
 }: {
   usStateChanged: (state: string) => void;
 }) {
+  const data = locationService.getLocations();
+
   const allStates = uniq(data.map((item) => item.state));
   const allCities = uniq(data.map((item) => item.city));
   const allstore = uniq(data.map((item) => item.store));

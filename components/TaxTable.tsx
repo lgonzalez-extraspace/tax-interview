@@ -1,9 +1,10 @@
 import * as React from 'react';
 import '../styles/style.css';
 import '../styles/tax-table.css';
-import { data } from '../data/data';
+import { locationService } from '../services/location-service';
 
 export default function TaxTable({ selectedState }: { selectedState: string }) {
+  const data = locationService.getLocations();
   const [tableData, setTableData] = React.useState(data);
 
   React.useEffect(() => {
