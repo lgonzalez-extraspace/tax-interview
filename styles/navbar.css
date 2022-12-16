@@ -7,7 +7,6 @@
 
 .navbar-logo {
   height: 100px;
-  border-bottom: 1px solid var(--white);
   width: 100%;
   background-image: url('../public/e-s-logo.svg');
   background-repeat: no-repeat;
@@ -16,6 +15,27 @@
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.navbar-spacer {
+  height: 15px;
+}
+
+.navbar-spacer.top {
+  border-top: 1px solid var(--light-grey);
+}
+
+.navbar-spacer.bottom {
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.admin-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--orange);
+  padding: 10px 0;
 }
 
 .navbar-links {
