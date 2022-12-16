@@ -20,7 +20,7 @@ export default function TaxTable({ selectedState }: { selectedState: string }) {
         <thead>
           <th>State</th>
           <th>City</th>
-          <th>Postal</th>
+          <th>Store</th>
         </thead>
         <tbody>
           {tableData.map((item) => {
@@ -28,7 +28,7 @@ export default function TaxTable({ selectedState }: { selectedState: string }) {
               <tr>
                 <td>{item.state}</td>
                 <td>{item.city}</td>
-                <td>{item.postal}</td>
+                <td>{item.store}</td>
               </tr>
             );
           })}

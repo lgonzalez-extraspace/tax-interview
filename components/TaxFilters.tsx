@@ -10,15 +10,15 @@ export default function FeeFilters({
 }) {
   const allStates = uniq(data.map((item) => item.state));
   const allCities = uniq(data.map((item) => item.city));
-  const allPostal = uniq(data.map((item) => item.postal));
+  const allstore = uniq(data.map((item) => item.store));
 
   const [selectedState, setSelectedState] = React.useState(allStates[0]);
   const [selectedCity, setSelectedCity] = React.useState(allCities[0]);
-  const [selectedPostal, setSelectedPostal] = React.useState(allPostal[0]);
+  const [selectedstore, setSelectedstore] = React.useState(allstore[0]);
 
   const [states, setStates] = React.useState(allStates);
   const [cities, setCities] = React.useState(allCities);
-  const [postals, setPostals] = React.useState(allPostal);
+  const [stores, setstores] = React.useState(allstore);
 
   React.useEffect(() => {
     if (selectedState) {
@@ -30,17 +30,17 @@ export default function FeeFilters({
         )
       );
 
-      setPostals(
+      setstores(
         uniq(
           data
             .filter((item) => item.city === selectedCity)
-            .map((item) => item.postal)
+            .map((item) => item.store)
         )
       );
     }
 
     usStateChanged(selectedState);
-  }, [selectedState, selectedPostal, selectedCity]);
+  }, [selectedState, selectedstore, selectedCity]);
 
   return (
     <div>
@@ -65,10 +65,10 @@ export default function FeeFilters({
         ))}
       </select>
       <select
-        value={selectedPostal}
-        onChange={(e) => setSelectedPostal(e.target.value)}
+        value={selectedstore}
+        onChange={(e) => setSelectedstore(e.target.value)}
       >
-        {postals.map((region) => (
+        {stores.map((region) => (
           <option key={region} value={region}>
             {region}
           </option>
