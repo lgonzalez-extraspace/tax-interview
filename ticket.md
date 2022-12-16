@@ -1,19 +1,23 @@
-Add Header: Tax Manager, Set Location
-
-- Design the locations dropdown similar to the video.
+The Goal of this excersice is to finalize the Tax Manager page which displays a table with the values mathing the selection of the dropdowns
 
 Example Video: https://watch.screencastify.com/v/SKHfIRqNUVOvEmkg3tSs
+Reference Images: './reference-images'
 
-- Default values for each dropdown will be “No state“, “No City“ and “No Store“.
+-- PART 1 --
 
-Technical notes: locations logic is in this function GetLocations service. View location-service.ts
+- Add Header: Tax Manager (refer to image and video for reference on styles)
+- Add Header: Set Location (refer to image and video for reference on styles)
+- Create 3 select, the data for each select should be the States, Cities and Stores
+  - The data is retrieved from the locationService found in "./services/location-service"
+  - The default value for each select should be “No state“, “No City“ and “No Store“ respectively
+- Add the Create Fee Button
 
--- PART 2--
+-- PART 2 --
 
-3.  Design the header without any data.
+- When the State dropdown is selected, the Cities dropdown should only show the cities for that State
+- Whene the Cities dropdown is selected, the Stores dropdown should only show the stores for that City
 
-Status/ Description / Revenue Class / Rate/ Exceptions
+-- PART 3 --
 
-4.  Design a button “Create Tax” without any logic.
-
-5.  Extra: Display the tax line by creating a grid
+- Create a Table to display the store data from the location service
+- Filter the values in the table using the selection from the dropdowns
