@@ -2,8 +2,8 @@ import * as React from 'react';
 import TaxManager from './TaxManager';
 import Header from './Header';
 import NavBar from './NavBar';
-import './styles/layout.css';
-import './styles/style.css';
+import '../styles/layout.css';
+import '../styles/style.css';
 
 export default function Layout() {
   return (

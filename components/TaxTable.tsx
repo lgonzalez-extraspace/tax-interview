@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './styles/style.css';
-import { data } from './data/data';
+import { data } from '../data/data';
 import './styles/tax-table.css';
 
 export default function TaxTable({ selectedState }: { selectedState: string }) {
