@@ -7,3 +7,22 @@
   margin-bottom: 10px;
   font-weight: bold;
 }
+
+select {
+  margin-bottom: 0;
+  background-color: var(--ghost-grey);
+  border: 1px solid var(--med-grey);
+  box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+  box-sizing: border-box;
+  line-height: 1;
+  padding: 0.5em 0.75em;
+  width: auto;
+  height: auto;
+  border-radius: 4px;
+  color: var(--dark-grey);
+  margin-right: 10px;
+}
+
+select:hover {
+  border-color: var(--orange);
+}

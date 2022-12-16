@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './styles/style.css';
 import { data } from './data/data';
-import { uniq } from 'lodash';
+import './styles/tax-table.css';
 
 export default function TaxTable({ selectedState }: { selectedState: string }) {
   const [tableData, setTableData] = React.useState(data);
