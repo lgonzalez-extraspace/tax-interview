@@ -18,34 +18,47 @@ export default function FeeFilters({
 
   const [selectedState, setSelectedState] = React.useState(allStates[0]);
   const [selectedCity, setSelectedCity] = React.useState(allCities[0]);
-  const [selectedstore, setSelectedstore] = React.useState(allstore[0]);
+  const [selectedStore, setSelectedStore] = React.useState(allstore[0]);
 
   const [states, setStates] = React.useState(allStates);
   const [cities, setCities] = React.useState(allCities);
-  const [stores, setstores] = React.useState(allstore);
+  const [stores, setStores] = React.useState(allstore);
 
   React.useEffect(() => {
-    if (selectedState) {
-      setCities(
-        uniq(
-          data
-            .filter((item) => item.state === selectedState)
-            .map((item) => item.city)
-        )
-      );
+    setStores(
+      uniq(
+        data
+          .filter((item) => item.city === selectedCity)
+          .map((item) => item.store)
+      )
+    );
 
-      setstores(
-        uniq(
-          data
-            .filter((item) => item.city === selectedCity)
-            .map((item) => item.store)
-        )
-      );
-    }
+    cityChanged(selectedCity);
+  }, [selectedCity]);
+
+  React.useEffect(() => {
+    setCities(
+      uniq(
+        data
+          .filter((item) => item.state === selectedState)
+          .map((item) => item.city)
+      )
+    );
+
+    setStores(
+      uniq(
+        data
+          .filter((item) => item.city === selectedCity)
+          .map((item) => item.store)
+      )
+    );
+
+    setSelectedCity('');
+    setSelectedStore('');
 
     usStateChanged(selectedState);
     cityChanged(selectedCity);
-  }, [selectedState, selectedstore, selectedCity]);
+  }, [selectedState]);
 
   return (
     <div>
@@ -77,8 +90,8 @@ export default function FeeFilters({
         ))}
       </select>
       <select
-        value={selectedstore}
-        onChange={(e) => setSelectedstore(e.target.value)}
+        value={selectedStore}
+        onChange={(e) => setSelectedStore(e.target.value)}
       >
         <option key="null" value={''}>
           No Store

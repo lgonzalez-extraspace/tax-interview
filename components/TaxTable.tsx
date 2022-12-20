@@ -14,22 +14,19 @@ export default function TaxTable({
   const [tableData, setTableData] = React.useState(data);
 
   React.useEffect(() => {
+    console.log({
+      selectedState,
+      selectedCity,
+    });
     if (!selectedCity && !selectedState) {
-      console.log(`here1 | ${selectedCity} | ${selectedState}`);
       setTableData(data);
-    }
-
-    if (selectedState && selectedCity) {
-      console.log(`here2 | ${selectedCity} | ${selectedState}`);
-
+    } else if (selectedState && selectedCity) {
       setTableData(
         data.filter(
           (item) => item.state === selectedState && item.city === selectedCity
         )
       );
-    }
-
-    if (!selectedCity) {
+    } else if (!selectedCity) {
       setTableData(data.filter((item) => item.state === selectedState));
     }
   }, [selectedState, selectedCity]);
