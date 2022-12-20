@@ -5,8 +5,10 @@ import { locationService } from '../services/location-service';
 
 export default function FeeFilters({
   usStateChanged,
+  cityChanged,
 }: {
   usStateChanged: (state: string) => void;
+  cityChanged: (city: string) => void;
 }) {
   const data = locationService.getLocations();
 
@@ -42,6 +44,7 @@ export default function FeeFilters({
     }
 
     usStateChanged(selectedState);
+    cityChanged(selectedCity);
   }, [selectedState, selectedstore, selectedCity]);
 
   return (
@@ -50,6 +53,9 @@ export default function FeeFilters({
         value={selectedState}
         onChange={(e) => setSelectedState(e.target.value)}
       >
+        <option key="null" value={''}>
+          No State
+        </option>
         {states.map((state) => (
           <option key={state} value={state}>
             {state}
@@ -60,6 +66,10 @@ export default function FeeFilters({
         value={selectedCity}
         onChange={(e) => setSelectedCity(e.target.value)}
       >
+        <option key="null" value={''}>
+          No City
+        </option>
+
         {cities.map((city) => (
           <option key={city} value={city}>
             {city}
@@ -70,6 +80,9 @@ export default function FeeFilters({
         value={selectedstore}
         onChange={(e) => setSelectedstore(e.target.value)}
       >
+        <option key="null" value={''}>
+          No Store
+        </option>
         {stores.map((region) => (
           <option key={region} value={region}>
             {region}

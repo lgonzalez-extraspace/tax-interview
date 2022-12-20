@@ -12,11 +12,21 @@ export default function TaxManager() {
     setSelectedState(state);
   };
 
+  const cityChanged: (city: string) => void = (city: string) => {
+    setSelectedCity(city);
+  };
+
   return (
     <div className="tax-manager">
       <div className="title">Tax Manager</div>
-      <TaxFilters usStateChanged={usStateChanged}></TaxFilters>
-      <TaxTable selectedState={selectedState}></TaxTable>
+      <TaxFilters
+        usStateChanged={usStateChanged}
+        cityChanged={cityChanged}
+      ></TaxFilters>
+      <TaxTable
+        selectedState={selectedState}
+        selectedCity={selectedCity}
+      ></TaxTable>
     </div>
   );
 }

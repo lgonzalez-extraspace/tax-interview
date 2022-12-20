@@ -3,17 +3,36 @@ import '../styles/style.css';
 import '../styles/tax-table.css';
 import { locationService } from '../services/location-service';
 
-export default function TaxTable({ selectedState }: { selectedState: string }) {
+export default function TaxTable({
+  selectedState,
+  selectedCity,
+}: {
+  selectedState: string;
+  selectedCity: string;
+}) {
   const data = locationService.getLocations();
   const [tableData, setTableData] = React.useState(data);
 
   React.useEffect(() => {
-    if (selectedState) {
-      setTableData(data.filter((item) => item.state === selectedState));
-    } else {
+    if (!selectedCity && !selectedState) {
+      console.log(`here1 | ${selectedCity} | ${selectedState}`);
       setTableData(data);
     }
-  }, [selectedState]);
+
+    if (selectedState && selectedCity) {
+      console.log(`here2 | ${selectedCity} | ${selectedState}`);
+
+      setTableData(
+        data.filter(
+          (item) => item.state === selectedState && item.city === selectedCity
+        )
+      );
+    }
+
+    if (!selectedCity) {
+      setTableData(data.filter((item) => item.state === selectedState));
+    }
+  }, [selectedState, selectedCity]);
 
   return (
     <div className="tax-table">
