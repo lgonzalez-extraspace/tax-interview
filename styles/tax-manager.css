@@ -1,5 +1,6 @@
 .tax-manager {
   padding: 10px;
+  width: 100%;
 }
 
 .title {
@@ -25,4 +26,11 @@ select {
 
 select:hover {
   border-color: var(--orange);
+}
+
+.sub-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
